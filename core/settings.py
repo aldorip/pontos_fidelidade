@@ -77,6 +77,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
+        'OPTIONS' : {
+            'options': '-c search_path=blog_db'
+        },
         'NAME': 'blog',         # Nome do seu banco de dados
         'USER': 'postgres',     # Nome de usuário do PostgreSQL
         'PASSWORD': 'arp3966',  # Senha do PostgreSQL
